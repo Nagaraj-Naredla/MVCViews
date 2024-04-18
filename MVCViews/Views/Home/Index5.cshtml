@@ -1,0 +1,48 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index5</title>
+</head>
+<body>
+    <div>
+        <h1>Razor Programming Example - 6</h1>
+        <h3>HTML Helpers</h3>
+        <hr />
+        @using (Html.BeginForm("Index5","Home",FormMethod.Post))
+            {
+                 @Html.Label("lblEmail","Enter Email")
+                 @Html.TextBox("email")
+            <br /><br />
+
+                 @Html.Label("lblPassword","Enter Password")
+                 @Html.TextBox("password")
+            <br />
+            <br />
+            @Html.Label("Select LoginType")
+            @Html.DropDownList("Logins")
+            <br />
+            <br />
+            <input type="submit" name="submit" value="Login"/>
+            }
+    </div>
+    @{
+        if (IsPost)
+        {
+            string email = Request["email"];
+            string password = Request["password"];
+            if (email == "nagaraj@gmail.com" && password == "vandi123#")
+            {
+                <h3 style="color:green;"> Login Success</h3>
+            }
+            else
+                {
+                    <h3 style="color:red;">Invalid ceredentials</h3>
+                }
+        }
+    }
+</body>
+</html>

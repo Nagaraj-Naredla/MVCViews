@@ -1,0 +1,42 @@
+﻿@{ 
+    var emps = new[]
+    {
+        new {EmpID = 33,EmpName = "Nagaraj",Salary =75000},
+        new {EmpID = 34,EmpName = "Arun",Salary =87457},
+        new {EmpID = 37,EmpName = "Uday",Salary =87657},
+        new {EmpID = 11,EmpName = "Tanishq",Salary =88747},
+    };
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div> 
+        <h2>Razor Progarmming Example-3</h2>
+        <hr />
+        <h3>Employee Info</h3>
+        <table align="center" border="1">
+            <tr>
+                <th>EmpID</th>
+                <th>EmpName</th>
+                <th>Salary</th>
+            </tr>
+                @{ 
+                    foreach(var item in emps)
+                    {
+                            <tr>
+                                <td>@item.EmpID</td>
+                                <td>@item.EmpName</td>
+                                <td>@item.Salary</td>
+                            </tr>
+                        
+                    }
+                }
+        </table>
+    </div>
+</body>
+</html>

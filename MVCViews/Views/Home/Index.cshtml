@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Razor View Programming</h1>
+        <hr />
+        @* Single Razor Programming Syntax*@
+        @{int x = 10; }
+        @*Multiple Razor Programming Syntax   *@
+        @{ 
+            if (x > 10)
+            {
+                @* Inline Synatx*@
+                <h2>Welcome,Value of is X is @x</h2> 
+}
+            else
+            {
+                    <h2>Hello, Value of X is:@x</h2>
+            }
+        }
+       
+    
+    </div>
+</body>
+</html>
